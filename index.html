@@ -3,11 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Student Identity Cipher</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Hello World</h1>
 
-    
+    <div class="main-box">
+        <h2>Student Identity Cipher</h2>
+        <p class="exam-info">Caesar Cipher Demo for Lab Exam 1</p>
+        <hr>
+
+        <div class="user-info">
+            <label>Name:</label>
+            <input type="text" id="nameInput" placeholder="Enter Full Name">
+            
+            <div class="grid-2">
+                <div>
+                    <label>Year:</label>
+                    <input type="text" id="yearInput" placeholder="Ex: 3rd Year">
+                </div>
+                <div>
+                    <label>Course:</label>
+                    <input type="text" id="courseInput" placeholder="Ex: BSIT">
+                </div>
+            </div>
+
+            <label>Shift Value (N):</label>
+            <input type="number" id="shiftN" value="3" min="1" max="25">
+        </div>
+
+        <div class="btn-group">
+            <button onclick="cipherAction('encrypt')" class="btn-primary">Encrypt My ID</button>
+            <button onclick="cipherAction('decrypt')" class="btn-secondary">Decrypt Back</button>
+        </div>
+
+        <div class="output-area">
+            <p><strong>Combined Text:</strong></p>
+            <div id="combinedText" class="box">---</div>
+
+            <p><strong>Final Result:</strong></p>
+            <div id="resultText" class="box highlight">---</div>
+        </div>
+
+        <button onclick="clearAll()" class="clear-link">Reset Form</button>
+        
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
